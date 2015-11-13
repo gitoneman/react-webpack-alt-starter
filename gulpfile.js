@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var uglify = require("gulp-uglify");
-var minifycss = require("gulp-minify-css");
+var cssshrink = require('gulp-cssshrink');
 var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
 var livereload = require("gulp-livereload");
@@ -45,7 +45,7 @@ gulp.task('publish-css', function () {
     return gulp.src('app/stylesheets/index.scss')
         .pipe(sass("index.css").on('error', sass.logError))
         .pipe(autoprefixer('last 2 version'))
-        .pipe(minifycss())
+        .pipe(cssshrink())
         .pipe(rev())
         .pipe(gulp.dest('public/css'))
         .pipe(rev.manifest('public/rev-manifest.json', {merge: true}))
@@ -68,7 +68,7 @@ gulp.task('publish-js', function () {
 });
 
 gulp.task('publish-html', function () {
-  return gulp.src(['public/rev-manifest.json', './index.html'])
+  return gulp.src(['public/rev-manifest.json', './index.html','views/login.html','views/register.html'])
     .pipe(revCollector({
         dirReplacements: {
             

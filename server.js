@@ -11,7 +11,6 @@ var mongoose = require('mongoose');
 var request = require('request');
 var React = require('react');
 var Router = require('react-router');
-var xml2js = require('xml2js');
 var _ = require('underscore');
 var router = require('./routers/router');
 var app = express();

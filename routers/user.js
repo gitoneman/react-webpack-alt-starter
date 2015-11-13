@@ -5,12 +5,12 @@ var crypto = require('crypto');
 
 module.exports = {
 	login:function(req,res){
-		fs.readFile("views/login.html","utf-8",function(err,data){
+		fs.readFile("public/www/login.html","utf-8",function(err,data){
 			res.send(data);
 	  	})	
 	},
 	register:function(req,res){		
-		fs.readFile("views/register.html","utf-8",function(err,data){
+		fs.readFile("public/www/register.html","utf-8",function(err,data){
 			res.send(data);
 	  	})
 	},

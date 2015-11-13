@@ -6,7 +6,7 @@
  2. npm run build
  3. npm run start
 
- ## 开发模式 ##
+## 开发模式 ##
 
  1. npm install
  2. npm run dev

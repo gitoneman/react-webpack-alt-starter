@@ -8,7 +8,7 @@ class WeatherActions{
       );
     }
     getWeather(){
-        $.ajax({url:"/weather"})
+        $.ajax({url:"/api/weather"})
         .done( data => {
             data = JSON.parse(data);
             this.actions.getSuccess(data);

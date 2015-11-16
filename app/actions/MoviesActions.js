@@ -9,7 +9,7 @@ class MoviesActions{
     }
 
     getMovies(limit) {
-        $.ajax({ url: '/movies',data:{limit:limit} })
+        $.ajax({ url: '/api/movies',data:{limit:limit} })
         .done(data => {
             this.actions.getMoviesSuccess(data);
         })

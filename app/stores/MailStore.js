@@ -15,6 +15,9 @@ class MailStore {
     onSendMailSuccess(formData) {
         this.sending = false;
     }
+    onSendMailFail() {
+        this.sending = false;
+    }
     onSendingMail(formData){
         this.sending = true;
         this.value = formData;

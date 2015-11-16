@@ -7,7 +7,7 @@ class UserActons{
         );
     }
     getUser() {
-        $.ajax({ type:'get',url: '/userinfo' })
+        $.ajax({ type:'get',url: '/api/userinfo' })
         .done(data => {
             this.actions.getUserSuccess(data);
         })

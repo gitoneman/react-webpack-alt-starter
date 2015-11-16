@@ -16,7 +16,7 @@ module.exports = {
 	},
 	logout:function(req,res){
 		req.logout();
-  		res.redirect('/');
+  		res.redirect('/login');
 	},
 	signup:function(req,res){
 		var username = req.body.username;

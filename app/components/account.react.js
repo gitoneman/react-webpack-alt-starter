@@ -92,7 +92,7 @@ class account extends React.Component {
 						<table className="table table-hover">
 							<thead>
 								<tr>
-									<th>创建时间</th>
+									<th>创建时间1</th>
 									<th>名称</th>
 									<th>金额</th>
 									<th style={{"width":50}}>操作</th>

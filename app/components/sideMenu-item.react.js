@@ -22,7 +22,7 @@ class accordionItem extends React.Component {
 
 		for (var i = 0; i < data.length; i++) {
 			if(data[i].href == "movies"){
-				menus.push(<li key={i}><IndexLink to="/" activeClassName="active"><Glyphicon glyph="grain" className="item-logo"/>{data[i].name}</IndexLink></li>)
+				menus.push(<li key={i}><Link to="/" activeClassName="active"><Glyphicon glyph="grain" className="item-logo"/>{data[i].name}</Link></li>)
 			}else{
 				menus.push(<li key={i}><Link to={"/" + data[i].href} activeClassName="active"><Glyphicon glyph="grain" className="item-logo"/>{data[i].name}</Link></li>);
 			}

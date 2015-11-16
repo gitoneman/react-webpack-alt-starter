@@ -4,11 +4,10 @@ import menu from "../menu.config";
 import _ from "underscore";
 
 function getInit(){
-	var hash = window.location.hash.slice(2);
-
+	var path = window.location.pathname.slice(1);
 
 	for(var i in menu){
-		if(hash == ""){
+		if(path == ""){
 			return i;
 		}
 		var arr = [];
@@ -17,7 +16,7 @@ function getInit(){
 			arr.push(item.href);
 		})
 
-		if(_.contains(arr,hash)){
+		if(_.contains(arr,path)){
 			return i;
 		}
 	}
@@ -27,12 +26,14 @@ class sideMenu extends React.Component {
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	    	now: getInit()
+	    	now: ""
 	    }
 	    this.clickHead = this.clickHead.bind(this);
   	}
   	componentDidMount() {
-
+	    this.setState({
+	    	now: getInit() 
+	    });
   	}
   	componentWillUnmount() {
 	   

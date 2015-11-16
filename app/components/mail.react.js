@@ -21,6 +21,7 @@ var options = {
 				return "不能为空"
 			},							
 			help:"提示：填写邮件主标题",
+			id: 1
 	    },
 	    to: {
 	    	label:"接收人",
@@ -30,6 +31,7 @@ var options = {
 				return "不能为空"
 			},							
 			help:"提示：填写邮件接收人",
+			id:2
 	    },
 	    text: {
 	    	label:"邮件内容",
@@ -39,6 +41,7 @@ var options = {
 				return "不能为空"
 			},							
 			help:"提示：填写邮件内容",
+			id:3
 	    }
 	},
 		
@@ -86,7 +89,6 @@ class mail extends React.Component {
 		if(value){
 			MailActions.sendMail(value);
 		}
-		console.log(value)
 	}
 }
 

@@ -9,14 +9,14 @@ class AccountActions{
         );
     }
     getList(){
-        $.ajax({type:"get",url:"/account"})
+        $.ajax({type:"get",url:"/api/account"})
         .done(data => {
             this.actions.getListSuccess(data);
         });
     }
     addCount(value) {
         $.ajax({
-            url: '/account/add',
+            url: '/api/account/add',
             type: 'post',
             data: value,
         })
@@ -31,7 +31,7 @@ class AccountActions{
     }
     delCount(id){
         $.ajax({
-            url:"/account/del",
+            url:"/api/account/del",
             type:"post",
             data:{
                 id:id
